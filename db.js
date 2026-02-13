@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 // This line loads the variables from .env into process.env
 dotenv.config(); 
 
-const mongooseUrl = process.env.DB_URL
+const mongooseUrl = process.env.DB_URL 
 
 // Now mongooseUrl will be your string instead of "undefined"
 mongoose.connect(mongooseUrl)
