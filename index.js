@@ -2,6 +2,8 @@ import express from "express";
 import db from "./db.js";
 import personRoute from "./routes/personRoute.js";
 import menuItemRoute from "./routes/menuItemRoute.js";
+import dotenv from "dotenv";
+dotenv.config();
 import bodyparser from "body-parser";
 
 const app = express();
@@ -14,9 +16,9 @@ app.get('/', (req, res) => {
 app.use('/person',personRoute)
 app.use('/menu',menuItemRoute)
 
+const PORT = process.env.PORT || 3000;
 
 
-
-app.listen(3000, () => {
-  console.log("server is running on port 3000");
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
