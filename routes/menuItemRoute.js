@@ -71,6 +71,14 @@ router.delete('/:id',async(req,res)=>{
         
     }
 })
+
+
+
+
+
+
+
+
 export default router;
 
  //menuroutes hii i am menu routes
