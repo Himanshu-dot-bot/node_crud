@@ -1,9 +1,12 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
 
-// Your connection string looks correct now!
+// This line loads the variables from .env into process.env
+dotenv.config(); 
+
 const mongooseUrl = process.env.DB_URL
 
-// REMOVED: useNewUrlParser and useUnifiedTopology
+// Now mongooseUrl will be your string instead of "undefined"
 mongoose.connect(mongooseUrl)
 
 const db = mongoose.connection
